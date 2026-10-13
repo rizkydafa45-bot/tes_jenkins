@@ -1,0 +1,9 @@
+{
+  "name": "hello-world-app",
+  "version": "1.0.0",
+  "description": "Aplikasi Node.js sederhana untuk testing Jenkins dan Docker",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  }
+}

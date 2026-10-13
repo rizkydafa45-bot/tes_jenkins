@@ -1,0 +1,20 @@
+# Gunakan image Node.js versi 18 berbasis Alpine (ukuran lebih ringan)
+FROM node:18-alpine
+
+# Tentukan direktori kerja di dalam container
+WORKDIR /app
+
+# Copy file package.json dan package-lock.json (jika ada)
+COPY package*.json ./
+
+# Install dependensi (meskipun saat ini kosong, ini adalah best practice)
+RUN npm install
+
+# Copy seluruh file aplikasi ke dalam container
+COPY . .
+
+# Ekspos port 3000 agar bisa diakses dari luar container
+EXPOSE 3000
+
+# Perintah untuk menjalankan aplikasi
+CMD ["npm", "start"]
